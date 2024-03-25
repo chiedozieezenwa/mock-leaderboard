@@ -5,19 +5,23 @@ import {
   BsWindowDesktop,
   BsRocket,
   BsPalette,
-  BsBadgeWc,
   BsGearFill,
 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-function Sidebar() {
+function Sidebar({ openSidebarToggle, OpenSidebar }) {
   return (
-    <aside id="sidebar">
+    <aside
+      id="sidebar"
+      className={openSidebarToggle ? "sidebar-responsive" : ""}
+    >
       <div className="sidebar-title">
         <div className="sidebar-brand">
           <BsCart3 className="icon_header" /> LEARNABLE
         </div>
-        <span className="icon close-icon">X</span>
+        <span className="icon close-icon" onClick={OpenSidebar}>
+          X
+        </span>
       </div>
 
       <ul className="sidebar-list">
@@ -44,11 +48,6 @@ function Sidebar() {
         <Link to="web3">
           <li className="sidebar-list-item">
             <BsRocket className="icon" /> Web3
-          </li>
-        </Link>
-        <Link to="mentors">
-          <li className="sidebar-list-item">
-            <BsBadgeWc className="icon" /> Mentors
           </li>
         </Link>
         <Link to="">

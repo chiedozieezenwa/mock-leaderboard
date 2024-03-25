@@ -5,46 +5,55 @@ import {
   BsRocket,
   BsPalette,
 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <main className="main-container">
       <div className="main-title">
-        <h3>DASHBOARD</h3>
+        <h1>DASHBOARD</h1>
       </div>
 
       <div className="main-cards">
-        <div className="card">
-          <div className="card-inner">
-            <h2>PRODUCT DESIGN</h2>
-            <BsPalette className="card_icon" />
+        <Link to="products">
+          <div className="product-card">
+            <div className="card-inner">
+              <h2>PRODUCT DESIGN</h2>
+              <BsPalette className="card_icon" />
+            </div>
+            <h1>10</h1>
           </div>
-          <h1>10</h1>
-        </div>
+        </Link>
 
-        <div className="card">
-          <div className="card-inner">
-            <h2>FRONTEND</h2>
-            <BsFileEarmarkCode className="card_icon" />
+        <Link to="frontend">
+          <div className="frontend-card">
+            <div className="card-inner">
+              <h2>FRONTEND</h2>
+              <BsFileEarmarkCode className="card_icon" />
+            </div>
+            <h1>10</h1>
           </div>
-          <h1>10</h1>
-        </div>
+        </Link>
 
-        <div className="card">
-          <div className="card-inner">
-            <h2>BACKEND</h2>
-            <BsWindowDesktop className="card_icon" />
+        <Link to="backend">
+          <div className="backend-card">
+            <div className="card-inner">
+              <h2>BACKEND</h2>
+              <BsWindowDesktop className="card_icon" />
+            </div>
+            <h1>10</h1>
           </div>
-          <h1>10</h1>
-        </div>
+        </Link>
 
-        <div className="card">
-          <div className="card-inner">
-            <h2>WEB3</h2>
-            <BsRocket className="card_icon" />
+        <Link to="web3">
+          <div className="web3-card">
+            <div className="card-inner">
+              <h2>WEB3</h2>
+              <BsRocket className="card_icon" />
+            </div>
+            <h1>10</h1>
           </div>
-          <h1>10</h1>
-        </div>
+        </Link>
       </div>
     </main>
   );

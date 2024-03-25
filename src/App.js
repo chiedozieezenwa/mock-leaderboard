@@ -7,13 +7,23 @@ import Products from "./pages/Products";
 import Frontend from "./pages/Frontend";
 import Backend from "./pages/Backend";
 import Web3 from "./pages/Web3";
+import { useState } from "react";
 
 function App() {
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle);
+  };
+
   return (
     <BrowserRouter>
       <div className="grid-container">
-        <Header />
-        <Sidebar />
+        <Header OpenSidebar={OpenSidebar} />
+        <Sidebar
+          openSidebarToggle={openSidebarToggle}
+          OpenSidebar={OpenSidebar}
+        />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />

@@ -5,17 +5,17 @@ function Web3() {
   return (
     <main className="main-container">
       <div className="main-title">
-        <h3>WEB3</h3>
+        <h1>WEB3</h1>
       </div>
 
       <div className="path-cards">
         {web3.slice(0, 3).map((item) => (
           <div className="card">
             <div className="path-card-inner">
-              <h2>{item.name}</h2>
               <img src={item.medal} alt="" />
+              <h2>{item.name}</h2>
             </div>
-            <h1>{item.grade}</h1>
+            <h1>{item.total}</h1>
           </div>
         ))}
       </div>

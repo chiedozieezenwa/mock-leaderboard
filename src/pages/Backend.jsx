@@ -6,17 +6,17 @@ function Backend() {
   return (
     <main className="main-container">
       <div className="main-title">
-        <h3>BACKEND</h3>
+        <h1>BACKEND</h1>
       </div>
 
       <div className="path-cards">
         {backend.slice(0, 3).map((item) => (
           <div className="card">
-            <div className="card-inner">
+            <div className="path-card-inner">
+              <img src={item.medal} alt="" />
               <h2>{item.name}</h2>
-              <BsWindowDesktop className="card_icon" />
             </div>
-            <h1>{item.grade}</h1>
+            <h1>{item.total}</h1>
           </div>
         ))}
       </div>
